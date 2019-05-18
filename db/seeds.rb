@@ -35,7 +35,7 @@ puts "5 skills created!"
 
 8.times do |portfolio_item|
   Portfolio.create!(
-    title: "Porfolio title: #{portfolio_item + 1}",
+    title: "Portfolio title: #{portfolio_item + 1}",
     subtitle: "Ruby on Rails",
     body: "Praesent cursus suscipit pulvinar. Cras condimentum tellus in lacus bibendum, at vestibulum ex tempor. Nulla non fringilla orci, ut commodo eros. Etiam auctor libero tellus, et imperdiet purus luctus ac. Etiam libero turpis, sodales et est eu, malesuada pulvinar urna. Fusce pellentesque sem eros, at consectetur sapien feugiat ut. Etiam vitae luctus neque. Nunc at massa vel tortor congue tempor vitae nec ligula. Sed aliquet gravida venenatis. Mauris eget erat nec odio iaculis accumsan vitae eu ante.",
     main_image: "https://via.placeholder.com/600x400",
@@ -45,7 +45,7 @@ end
 
 1.times do |portfolio_item|
   Portfolio.create!(
-    title: "Porfolio title: #{portfolio_item + 1}",
+    title: "Portfolio title: #{portfolio_item + 1}",
     subtitle: "React",
     body: "Praesent cursus suscipit pulvinar. Cras condimentum tellus in lacus bibendum, at vestibulum ex tempor. Nulla non fringilla orci, ut commodo eros. Etiam auctor libero tellus, et imperdiet purus luctus ac. Etiam libero turpis, sodales et est eu, malesuada pulvinar urna. Fusce pellentesque sem eros, at consectetur sapien feugiat ut. Etiam vitae luctus neque. Nunc at massa vel tortor congue tempor vitae nec ligula. Sed aliquet gravida venenatis. Mauris eget erat nec odio iaculis accumsan vitae eu ante.",
     main_image: "https://via.placeholder.com/600x400",
@@ -53,4 +53,12 @@ end
   )
 end
 
-puts "9 porfolios created!"
+puts "9 portfolios created!"
+
+3.times do |technology|
+  Portfolio.last.technologies.create!(
+    name: "Technology no.#{technology + 1}"
+  )
+end
+
+puts "3 technologies created!"
