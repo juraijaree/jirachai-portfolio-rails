@@ -16,4 +16,8 @@ module ApplicationHelper
       content_tag :p, greetin_text, class: "source-greeting"
     end
   end
+
+  def copyright_generator
+    JirachaiViewTool::Renderer.copyright 'Huad', 'All rights reserved'
+  end
 end
