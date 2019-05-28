@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 
 /* stylelint-disable selector-list-comma-newline-after */
 
@@ -128,4 +129,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .login-helper-blogs {
   margin-left: 10px;
+}
+
+.social-links li {
+  font-size: 2.5em;
 }
